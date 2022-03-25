@@ -38,15 +38,15 @@
         <div class="p-0 col-2">
             <div class="nav flex-column nav-pills pt-2" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                 <a class="nav-link active" href="/admin" aria-controls="v-pills-home" aria-selected="true"
-                   sec:authorize="hasRole('ADMIN')">Admin</a>
+                   sec:authorize="hasRole('ADMIN')"><h5>Admin</h5></a>
                 <a class="nav-link " href="/user" role="tab" aria-controls="v-pills-profile" aria-selected="false"
-                   sec:authorize="(hasAnyRole('USER','ADMIN'))">User</a>
+                   sec:authorize="(hasAnyRole('USER','ADMIN'))"><h5>User</h5></a>
             </div>
         </div>
-        <div class="col-lg-10">
-            <div class="ui-corner-left">
+        <div class="col-lg-10 h-100 bg-light text-dark">
+            <div class="ui-corner-left " >
                 <br>
-                <div>
+                <div class="vh-100 bg-light text-dark">
 
                     <!--                    Выбор вкладок Таблица/+ юзер-->
 
@@ -279,17 +279,6 @@
                                                                                 <input th:type="email" th:name="email"
                                                                                        class="form-control" id="emailD"
                                                                                        th:value="${user.getEmail()}" readonly/>
-                                                                            </div>
-                                                                            <div class="form-group">
-
-                                                                                <label for="passwordD"><b>Password</b></label>
-                                                                                <input th:type="password"
-                                                                                       th:name="password"
-                                                                                       class="form-control"
-                                                                                       id="passwordD"
-                                                                                       th:value="${user.getPassword()}"
-                                                                                       readonly/>
-                                                                                <label for="rolesD"><b>Role</b></label>
                                                                             </div>
                                                                             <div class="form-group">
 

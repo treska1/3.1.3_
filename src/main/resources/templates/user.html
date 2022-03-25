@@ -41,18 +41,18 @@
         <div class="p-0 col-2">
             <div class="nav flex-column nav-pills pt-2" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                 <a class="nav-link" href="/admin" aria-controls="v-pills-home" aria-selected="false"
-                   sec:authorize="hasRole('ADMIN')">Admin</a>
+                   sec:authorize="hasRole('ADMIN')"><h5>Admin</h5></a>
                 <a class="nav-link active" href="/user" role="tab" aria-controls="v-pills-profile" aria-selected="true"
-                   sec:authorize="(hasAnyRole('USER','ADMIN'))">User</a>
+                   sec:authorize="(hasAnyRole('USER','ADMIN'))"><h5>User</h5></a>
             </div>
         </div>
-        <div class="col-lg-10">
-            <div class="ui-corner-right">
+        <div class="col-lg-10 vh-100 bg-light text-dark">
+            <div class="ui-corner-right vh-100 bg-light text-dark">
                 <br>
 
-<!--                Инфо юзера-->
+<!--          class="vh-100 bg-light text-dark"      Инфо юзера-->
 
-                <div>
+                <div >
                     <h1>User information-page</h1>
                     <div class="container-fluid">
                         <div class="card">
