@@ -23,7 +23,7 @@
                     <span class="align-middle font-weight-bold mr-1" sec:authentication="name"></span></b>
                     <span class="align-middle mr-1">with roles:</span>
                     <span class="align-middle" >
-                        <a th:each="role : ${userInfo.roles}" th:text="${role.getName()}"></a>
+                        <a th:each="role : ${userInfo.roles}" th:text="${role.getName() == 'ROLE_ADMIN' ? 'ADMIN' : 'USER'}"></a>
                     </span>
                 </ul>
             </div>
@@ -77,7 +77,7 @@
                                         <td th:text="${userInfo.getAge()}"></td>
                                         <td th:text="${userInfo.getEmail()}"></td>
                                         <td>
-                                            <div th:each="role : ${userInfo.roles}" th:text="${role.getName()} "></div>
+                                            <div th:each="role : ${userInfo.roles}" th:text="${role.getName() == 'ROLE_ADMIN' ? 'ADMIN' : 'USER'} "></div>
                                         </td>
                                     </tr>
                                     </tbody>

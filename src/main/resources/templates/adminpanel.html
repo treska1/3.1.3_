@@ -21,7 +21,7 @@
                 <ul class="navbar-nav me-auto mb-2 mb-xl-0">
                     <span class="align-middle font-weight-bold mr-1" sec:authentication="name"></span></b>
                     <span class="align-middle mr-1">with roles:</span>
-                    <span class="align-middle" th:each="role : ${userInfo.roles}" th:utext="${role.name}"></span>
+                    <span class="align-middle" th:block th:each=" role : ${roles}" th:text="${role.getName() == 'ROLE_ADMIN' ? 'ADMIN' : 'USER'} + &emsp"></span>
                 </ul>
             </div>
             <form th:action="@{/logout}" method="post">
@@ -100,7 +100,7 @@
                                                 <td th:text="${user.email}"></td>
                                                 <td>
                                                     <div th:each="role : ${user.roles}"
-                                                         th:text="${role.name}"></div>
+                                                         th:text="${role.getName() == 'ROLE_ADMIN' ? 'ADMIN' : 'USER'}"></div>
                                                 </td>
                                                 <td>
                                                     <button type="button" class="btn btn-info" data-toggle="modal"
